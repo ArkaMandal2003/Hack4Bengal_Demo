@@ -1,0 +1,20 @@
+<h2>Smart Investment Advisor</h2>
+<form method="POST">
+  Monthly Saving: <input name="saving" required><br>
+  Risk Tolerance:
+  <select name="risk">
+    <option value="low">Low</option>
+    <option value="medium">Medium</option>
+    <option value="high">High</option>
+  </select><br>
+  <button type="submit">Get Advice</button>
+</form>
+
+{% if suggestion %}
+  <h3>Recommended Plan</h3>
+  <ul>
+    {% for k, v in suggestion.items() %}
+      <li>{{ k }}: ₹{{ "%.2f"|format(v) }}</li>
+    {% endfor %}
+  </ul>
+{% endif %}

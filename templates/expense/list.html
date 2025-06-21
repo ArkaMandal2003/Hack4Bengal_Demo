@@ -1,0 +1,7 @@
+<h2>All Expenses</h2>
+<a href="/expenses/add">Add More</a>
+<ul>
+  {% for e in expenses %}
+    <li>{{ e.date }} - ₹{{ e.amount }} - {{ e.category }} ({{ e.description }})</li>
+  {% endfor %}
+</ul>

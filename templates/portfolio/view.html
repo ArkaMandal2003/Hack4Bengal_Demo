@@ -1,0 +1,7 @@
+<h2>Your Portfolio</h2>
+<a href="/portfolio/add">Add More</a>
+<ul>
+  {% for p in portfolio %}
+    <li>{{ p.type }} - {{ p.asset }} | Invested: ₹{{ p.amount }} → Now: ₹{{ p.current_value }}</li>
+  {% endfor %}
+</ul>
